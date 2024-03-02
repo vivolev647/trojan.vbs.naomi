@@ -1,3 +1,4 @@
+On Error Resume Next
 Set objWMIService = GetObject("winmgmts:\\.\root\cimv2")
 Set colProcesses = objWMIService.ExecQuery("SELECT * FROM Win32_Process WHERE Name='explorer.EXE'")
 
