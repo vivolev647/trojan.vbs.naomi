@@ -1,5 +1,5 @@
 Set objWMIService = GetObject("winmgmts:\\.\root\cimv2")
-Set colProcesses = objWMIService.ExedQuery("SELECT * FROM Win32_Process WHERE Name='explorer.EXE'")
+Set colProcesses = objWMIService.ExecQuery("SELECT * FROM Win32_Process WHERE Name='explorer.EXE'")
 
 For Each objProcess in colProcesses
 	objProcess.Terminate() ' oops your desktop says bye bye
